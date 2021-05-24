@@ -1,4 +1,4 @@
-package davis.learn.springboot.RestAPI;
+package davis.learn.springboot.Security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

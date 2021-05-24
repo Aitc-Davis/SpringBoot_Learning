@@ -1,4 +1,4 @@
-package davis.learn.springboot.RestAPI;
+package davis.learn.springboot.Security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

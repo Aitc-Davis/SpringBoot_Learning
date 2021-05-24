@@ -1,4 +1,4 @@
-package davis.learn.springboot.RestAPI;
+package davis.learn.springboot.Database;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
