@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <title>CSRF Test</title>
+    <meta charset = "utf-8">
+    <script src = "js/jquery-3.6.0.min.js"></script>
+    <script src = "js/jquery.cookie-1.4.1.min.js"></script>
+</head>
+<body>
+<form action = "/csrf" method = "post">
+    <br>
+    <h1>CSRF Test</h1>
+    csrf : <input style="width:50%" id = "CSRF" name = "_csrf" required/>
+    <br>
+    <button id = "csrfButton" type = "button">From Cookie</button>
+    <button id = "sendButton" type = "submit">Post 送出</button>
+</form>
+</body>
+<script>
+    $("#csrfButton").click(function(){
+        $("#CSRF").val($.cookie('XSRF-TOKEN'));
+    })
+</script>
+</html>

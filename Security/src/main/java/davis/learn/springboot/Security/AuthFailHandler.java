@@ -14,13 +14,14 @@ import java.io.IOException;
 public class AuthFailHandler extends SimpleUrlAuthenticationFailureHandler {
 	private static final Logger LOG = LoggerFactory.getLogger(AuthFailHandler.class);
 
+	public AuthFailHandler(String defaultFailureUrl) {
+		super(defaultFailureUrl);
+	}
+
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest req, HttpServletResponse resp, AuthenticationException exception) throws IOException, ServletException {
 		LOG.info("{} login failed, {}", req.getParameter("username"), exception.getClass().getSimpleName() + ": " + exception.getMessage());
 		saveException(req, exception);
-
-		setDefaultFailureUrl("/login.html?error");
-
 		super.onAuthenticationFailure(req, resp, exception);
 	}
 }

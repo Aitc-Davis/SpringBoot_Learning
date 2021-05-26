@@ -16,8 +16,8 @@ import java.util.Set;
 public class AuthSuccHandler extends SimpleUrlAuthenticationSuccessHandler {
 	private static final Logger LOG = LoggerFactory.getLogger(AuthSuccHandler.class);
 
-	public AuthSuccHandler() {
-		super("/today");
+	public AuthSuccHandler(String defaultTargeyUrl) {
+		super(defaultTargeyUrl);
 	}
 
 	@Override
